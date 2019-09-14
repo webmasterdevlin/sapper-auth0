@@ -20,7 +20,7 @@ function createAuthStore () {
       const auth0 = await createAuth0Client({
         domain: 'devlin.auth0.com',
         client_id: 'KfNd25r5D3bExtUdYVp32eKlusjKS3kv',
-        redirect_uri: 'http://localhost:3000/callback'
+        redirect_uri: 'http://detailed-fruit.surge.sh/callback'
       });
       const query = search;
       if (query.includes("code=") && query.includes("state=")) {
@@ -43,7 +43,7 @@ function createAuthStore () {
        const auth0 = await createAuth0Client({
          domain: 'devlin.auth0.com',
          client_id: 'KfNd25r5D3bExtUdYVp32eKlusjKS3kv',
-         redirect_uri: 'http://localhost:3000/callback'
+         redirect_uri: 'http://detailed-fruit.surge.sh/callback'
        });
        update(state => (state = { ...state, loading: false }));
        return auth0.loginWithRedirect(...p)
@@ -59,7 +59,7 @@ function createAuthStore () {
       const auth0 = await createAuth0Client({
         domain: 'devlin.auth0.com',
         client_id: 'KfNd25r5D3bExtUdYVp32eKlusjKS3kv',
-        redirect_uri: 'http://localhost:3000/callback'
+        redirect_uri: 'http://detailed-fruit.surge.sh/callback'
       });
       update(state => (state = { ...state, isAuthenticated: false, loading: false }));
       await auth0.logout({
